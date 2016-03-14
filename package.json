@@ -1,16 +1,17 @@
 {
-  "name": "bloc-frontend-project-starter",
-  "version": "0.0.2",
-  "description": "Starter project for the Bloc Frontend Web Development",
+  //"name": "bloc-frontend-project-starter",
+    "name": "maelsart",
+  "version": "0.0.0",
+  "description": "Art gallery",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bloc/bloc-frontend-project-starter"
+    "url": "https://github.com/bloc/maelsart"
   },
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
-  "author": "Bloc Inc",
+  "author": "Paul Thompson",
   "license": "ISC",
   "dependencies": {
     "hapi": "~7.5.0",

@@ -1,0 +1,28 @@
+
+.art-image {
+    height: 20%;
+    width: 20%;
+    box-shadow: 10px 5px 5px black;
+    margin: 5px;
+}
+
+.artist-header {
+    position: relative;
+    background-color: black;
+    bottom: 1;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    color: white;
+    font-family: courier;
+}
+
+
+
+.ng-hide {
+  /* this is just another form of hiding an element */
+  display: block!important;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
