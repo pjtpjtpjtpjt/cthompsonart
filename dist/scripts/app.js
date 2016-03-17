@@ -1,6 +1,8 @@
 angular.module('maelsartapp',[])
     .controller('gallery-controller', function($scope) {
     
+    $scope.purchaseChoices = ['Print','Artwork','TShirt']
+    
     $scope.artList = [
         {
             artistUser: {
@@ -11,7 +13,11 @@ angular.module('maelsartapp',[])
             artYear:'2011',
             artTopic: 'animal',
             artImageUrl: 'assets/images/birdheart.jpg',
-            emptyStatus: ''
+            artMedium: 'Oil on canvas',
+            artPurchase: {
+                artPrint: false,
+                artWork: true 
+            }   
         },
         {
             artistUser: {
@@ -22,8 +28,11 @@ angular.module('maelsartapp',[])
             artYear:'2011',
             artTopic: 'military',
             artImageUrl: 'assets/images/battleship1.jpg',
-            emptyStatus: ''
-            
+            artMedium: 'Oil on canvas',
+            artPurchase: {
+                artPrint: true,
+                artWork: true 
+            }
         },
         {
             artistUser: {
@@ -34,7 +43,11 @@ angular.module('maelsartapp',[])
             artYear:'2011',
             artTopic: 'animal',
             artImageUrl: 'assets/images/angrychihuahua.jpg',
-            emptyStatus: ''
+            artMedium: 'Oil on canvas',
+            artPurchase: {
+                artPrint: true,
+                artWork: true 
+            }
         },
         {
             artistUser: {
@@ -45,7 +58,11 @@ angular.module('maelsartapp',[])
             artYear:'2011',
             artTopic: 'animal',
             artImageUrl: 'assets/images/candycanebat copy.jpg',
-            emptyStatus: ''
+            artMedium: 'Oil on canvas',
+            artPurchase: {
+                artPrint: true,
+                artWork: true 
+            }
         },
         {
             artistUser: {
@@ -56,7 +73,11 @@ angular.module('maelsartapp',[])
             artYear:'2011',
             artTopic: 'animal',
             artImageUrl: 'assets/images/metalmoths.jpg',
-            emptyStatus: ''
+            artMedium: 'Oil on canvas',
+            artPurchase: {
+                artPrint: true,
+                artWork: true 
+            }
         },
         {
             artistUser: {
@@ -67,7 +88,11 @@ angular.module('maelsartapp',[])
             artYear:'2011',
             artTopic: 'animal',
             artImageUrl: 'assets/images/santabird.jpg',
-            emptyStatus: ''
+            artMedium: 'Oil on canvas',
+            artPurchase: {
+                artPrint: true,
+                artWork: true 
+            }
         },
         {
             artistUser: {
@@ -78,7 +103,11 @@ angular.module('maelsartapp',[])
             artYear:'2011',
             artTopic: 'person',
             artImageUrl: 'assets/images/santaskull.jpg',
-            emptyStatus: ''
+            artMedium: 'Oil on canvas',
+            artPurchase: {
+                artPrint: true,
+                artWork: true 
+            }
         },
         {
             artistUser: {
@@ -89,15 +118,26 @@ angular.module('maelsartapp',[])
             artYear:'2011',
             artTopic: 'animal',
             artImageUrl: 'assets/images/birds.jpg',
-            emptyStatus: ''
+            artMedium: 'Oil on canvas',
+            artPurchase: {
+                artPrint: true,
+                artWork: true 
+            }
         }
     ];
 
     $scope.artImageClick = function(title){
         if(title === $scope.currentTitle){
             title = "";
+    
         }
+        
+        $scope.visibleIndex = this.$index;
         $scope.currentTitle = title;
+        
+        
+        
+        
     };    
 });
 

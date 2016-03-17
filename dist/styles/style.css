@@ -1,7 +1,11 @@
+.art-image-container{
+
+}
 
 .art-image {
-    height: 20%;
+    float: left;
     width: 20%;
+    height: 20%;
     box-shadow: 10px 5px 5px black;
     margin: 5px;
 }
@@ -17,12 +21,26 @@
     font-family: courier;
 }
 
-
-
 .ng-hide {
-  /* this is just another form of hiding an element */
   display: block!important;
   position: absolute;
   top: -9999px;
   left: -9999px;
+}
+
+.art-info {
+    padding: 10px;
+    position: relative;
+    float: right;
+    background-color: lightgray;
+    color: black;
+    font-size: 120%;
+    font-family: courier;
+    width: 20%;
+    height: 20%;
+}
+
+.art-larger {
+    width: 50%;
+    height: 50%;
 }
