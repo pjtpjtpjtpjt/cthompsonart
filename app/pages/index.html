@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
+<head lang='en'>
+    <meta charset='UTF-8'>
     <title>Chris Thompson - Artist</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
-    <script src="/scripts/app.js"></script>
-    <link rel="stylesheet" href="/styles/style.css">
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js'></script>
+    <script src='/scripts/app.js'></script>
+    <link rel='stylesheet' href='/styles/style.css'>
     
 </head>
-<body ng-app="maelsartapp" ng-controller="gallery-controller">
+<body ng-app='maelsartapp' ng-controller='gallery-controller'>
     
 <h2 class='artist-header'>{{artList[0].artistUser.firstName}} {{artList[0].artistUser.lastName}}</h2>
 
-<div ng-repeat="artdetails in artList">
-    <img class='art-image' ng-click="artImageClick(artdetails.artTitle)" ng-src="{{artdetails.artImageUrl}}" ng-hide="currentTitle && currentTitle != artdetails.artTitle">
+<div class='art-image-container'>
+    <div ng-repeat='artdetails in artList'>
+        <img class='art-image' ng-class='{"art-larger": currentTitle == artdetails.artTitle}' ng-click='artImageClick(artdetails.artTitle)'
+         ng-src='{{artdetails.artImageUrl}}' ng-hide='currentTitle && currentTitle != artdetails.artTitle'>
+    </div>
 </div>
     
-
+<div ng-show='currentTitle && currentTitle != artdetails.artTitle'>
+    <p class='art-info'><b>{{artList[visibleIndex].artMedium}}</b></p>
+    <p class='art-info'><b>{{artList[visibleIndex].artTitle}}</b></p>
+    <form class='art-info'>
+        <div  ng-model="data.singleSelect"> 
+            <select>
+                <option value ng-repeat='selections in purchaseChoices'>{{selections}}</option>
+            </select>
+        </div>
+    </form>      
+</div>
 
     
 </body>
