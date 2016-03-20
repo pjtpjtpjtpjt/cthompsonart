@@ -22,13 +22,19 @@
 <div ng-show='currentTitle && currentTitle != artdetails.artTitle'>
     <p class='art-info'><b>{{artList[visibleIndex].artMedium}}</b></p>
     <p class='art-info'><b>{{artList[visibleIndex].artTitle}}</b></p>
-    <form class='art-info'>
-        <div  ng-model="data.singleSelect"> 
+    
+    <form class='art-info' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <div ng-model="selectArtType">
+            <p>Get art!</p>
             <select>
-                <option value ng-repeat='selections in purchaseChoices'>{{selections}}</option>
-            </select>
+                <option ng-click='artZero()' value=>Select a type</option>
+                <option value ng-click='artCost(value)' ng-repeat='(key, value) in artList[visibleIndex].artPurchase'>{{value}}</option>
+            </select><br><br> 
         </div>
-    </form>      
+                    <div><b>{{displayCost}}</b><br><br><br>          
+                <div ng-include src='payPalButton'></div>
+            </div>
+    </form>        
 </div>
 
     
