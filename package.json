@@ -1,6 +1,5 @@
 {
-  //"name": "bloc-frontend-project-starter",
-    "name": "maelsart",
+  "name": "maelsart",
   "version": "0.0.0",
   "description": "Art gallery",
   "repository": {
@@ -25,6 +24,8 @@
     "grunt-contrib-clean": "~0.6.0",
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-hapi": "^0.8.1"
+    "grunt-hapi": "^0.8.1",
+    "grunt-sass": "^1.1.0",
+    "load-grunt-tasks": "^3.4.1"
   }
 }
