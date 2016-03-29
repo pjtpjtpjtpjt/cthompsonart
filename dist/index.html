@@ -1,42 +1,38 @@
 <!DOCTYPE html>
-<html>
-<head lang='en'>
+<html lang='en'>
+<head>
     <meta charset='UTF-8'>
     <title>Chris Thompson - Artist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://www.paypalobjects.com/js/external/paypal-button.min.js"></script>
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js'></script>
     <script src='/scripts/app.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel='stylesheet' href='/styles/style.css'>
-    
 </head>
 <body ng-app='maelsartapp' ng-controller='gallery-controller'>
-    
-<h2 class='artist-header'>{{artList[0].artistUser.firstName}} {{artList[0].artistUser.lastName}}</h2>
-
-<div class='art-image-container'>
-    <div ng-repeat='artdetails in artList'>
-        <img class='art-image' ng-class='{"art-larger": currentTitle == artdetails.artTitle}' ng-click='artImageClick(artdetails.artTitle)'
-         ng-src='{{artdetails.artImageUrl}}' ng-hide='currentTitle && currentTitle != artdetails.artTitle'>
-    </div>
-</div>
-    
-<div ng-show='currentTitle && currentTitle != artdetails.artTitle'>
-    <p class='art-info'><b>{{artList[visibleIndex].artMedium}}</b></p>
-    <p class='art-info'><b>{{artList[visibleIndex].artTitle}}</b></p>
-    
-    <form class='art-info' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-        <div ng-model="selectArtType">
-            <p>Get art!</p>
-            <select>
-                <option ng-click='artZero()' value=>Select a type</option>
-                <option value ng-click='artCost(value)' ng-repeat='(key, value) in artList[visibleIndex].artPurchase'>{{value}}</option>
-            </select><br><br> 
-        </div>
-                    <div><b>{{displayCost}}</b><br><br><br>          
-                <div ng-include src='payPalButton'></div>
+    <h1 class='artist-header'  ng-hide='currentTitle && currentTitle != artdetails.artTitle'>{{artistUser.firstName}} {{artistUser.lastName}} </h1>
+    <div class='container-fluid'>
+        <div ng-repeat='repeatclass in columnClass'>
+            <div class={{repeatclass}}>
+                <div ng-repeat='artdetails in smallArtList[$index]'>
+                    <img class='img-responsive' ng-src='{{artdetails.artImageUrl}}' ng-click='artImageClick(artdetails.artTitle)'
+                     ng-hide='currentTitle && currentTitle != artdetails.artTitle' ng-class='{"art-larger": isLarger === "larger"}'>
+                </div>
             </div>
-    </form>        
-</div>
-
-    
+        </div>
+    </div>
+    <div ng-show='currentTitle && currentTitle != artdetails.artTitle'>  
+        <div ng-model='selectArtType' class='art-info'>
+            <h2 class='art-large-text'>{{clickedArtTitle}}</h2>
+            <h3>Get art!</h3>
+            <h3><select>
+                <option ng-click='artZero()' value=>Select a type</option>
+                <option value ng-click='artCost(purchasetype)' ng-repeat='purchasetype in clickedArtPurchase'>{{purchasetype}}</option>
+            </select></h3>
+            <h3 class='art-large-text'>{{revealCost}}</h3>
+            <div ng-include src='payPalButton'></div>
+        </div>             
+    </div>
 </body>
 </html>
