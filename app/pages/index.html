@@ -21,12 +21,12 @@
             </div>
         </div>
     </div>
-    <div ng-show='currentTitle && currentTitle != artdetails.artTitle'>  
+    <div ng-show='currentTitle && currentTitle != artdetails.artTitle'>
         <div ng-model='selectArtType' class='art-info'>
             <h2 class='art-large-text'>{{clickedArtTitle}}</h2>
             <h3>Get art!</h3>
             <h3><select>
-                <option ng-click='artZero()' value=>Select a type</option>
+                <option value ng-click='artZero()' value=>Select a type</option>
                 <option value ng-click='artCost(purchasetype)' ng-repeat='purchasetype in clickedArtPurchase'>{{purchasetype}}</option>
             </select></h3>
             <h3 class='art-large-text'>{{revealCost}}</h3>
