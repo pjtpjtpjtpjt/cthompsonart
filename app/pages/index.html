@@ -23,13 +23,13 @@
     </div>
     <div ng-show='currentTitle && currentTitle != artdetails.artTitle'>
         <div ng-model='selectArtType' class='art-info'>
-            <h2 class='art-large-text'>{{clickedArtTitle}}</h2>
-            <h3>Get art!</h3>
-            <h3><select>
-                <option value ng-click='artZero()' value=>Select a type</option>
+            <h3 class='art-large-text'>{{clickedArtTitle}}</h2>
+            <h4>Get art!</h4>
+            <h4><select>
+                <option value ng-click='artZero()'>Select a type</option>
                 <option value ng-click='artCost(purchasetype)' ng-repeat='purchasetype in clickedArtPurchase'>{{purchasetype}}</option>
-            </select></h3>
-            <h3 class='art-large-text'>{{revealCost}}</h3>
+            </select></h4>
+            <h4 class='art-large-text'>{{revealCost}}</h4>
             <div ng-include src='payPalButton'></div>
         </div>             
     </div>
