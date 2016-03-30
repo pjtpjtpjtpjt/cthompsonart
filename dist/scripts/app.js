@@ -8,6 +8,17 @@ angular.module('maelsartapp',[])
     
     $scope.artList = [
         {   
+        artTitle: 'Battleship',
+        artYear:'2011',
+        artTopic: 'military',
+        artImageUrl: '/assets/images/battleship1.jpg',
+        artMedium: 'Acrylic on canvas',
+        artPurchase: ['Print'],
+        printSize: '11" x 14"',
+        originalSize: 'x',
+        artOriginalCost: 'xx'
+        },
+        {
         artTitle: 'Owl and Skull',
         artYear:'2010',
         artTopic: 'animal',
@@ -17,17 +28,6 @@ angular.module('maelsartapp',[])
         printSize: '8" x 10"',
         originalSize: '16" x 20"',
         artOriginalCost: '$650.00'
-        },
-        {
-        artTitle: 'Battleship',
-        artYear:'2011',
-        artTopic: 'military',
-        artImageUrl: '/assets/images/battleship1.jpg',
-        artMedium: 'Acrylic on canvas',
-        artPurchase: ['Print'],
-        printSize: '11" x 14"',
-        originalSize: 'x',
-        artOriginalCost: 'x'
         },
         { 
         artTitle: 'Angry Chihuahua',
