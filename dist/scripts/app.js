@@ -276,7 +276,7 @@ angular.module('maelsartapp',[])
         artYear:'2011',
         artTopic: 'animal',
         artImageUrl: '/assets/images/gumballs.jpg',
-        artMedium: 'Watercolor and ink on paper',
+        artMedium: 'Watercolor & ink on paper',
         artPurchase: ['Original painting'],
         printSize: 'x',
         originalSize: '11" x 17"',
