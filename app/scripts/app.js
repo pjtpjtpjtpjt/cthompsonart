@@ -27,7 +27,7 @@ angular.module('maelsartapp',[])
         artPurchase: ['Print'],
         printSize: '11" x 14"',
         originalSize: 'x',
-        artOriginalCost: 'x'
+        artOriginalCost: 'xx'
         },
         { 
         artTitle: 'Angry Chihuahua',
