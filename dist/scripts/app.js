@@ -55,7 +55,7 @@ angular.module('maelsartapp',[])
         artTitle: 'Candycane Bat',
         artYear:'2011',
         artTopic: 'animal',
-        artImageUrl: 'http://s3.amazonaws.com/christhompsonproductions/candycanebat copy.jpg',
+        artImageUrl: 'http://s3.amazonaws.com/christhompsonproductions/candycanebat.jpg',
         artMedium: 'Oil on canvas',
         artPurchase: ['Print'],
         printSize: '11" x 14"',
