@@ -8,7 +8,7 @@
     <link rel='stylesheet' href='/styles/style.css'>
 </head>
     
-    <div ng-hide='allLoaded' ng-cloak>
+    <div ng-hide='allLoaded !="loaded"' ng-cloak>
     
 <body ng-app='maelsartapp' ng-controller='gallery-controller'>    
     <h1 class='artist-header'  ng-hide='currentTitle && currentTitle != artdetails.artTitle'>{{artistUser.firstName}} {{artistUser.lastName}} Art </h1>

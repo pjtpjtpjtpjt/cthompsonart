@@ -380,7 +380,7 @@ angular.module('maelsartapp',[])
                 };
             };
         
-            $scope.allLoaded
+            $scope.allLoaded = 'loaded';
     })();
     
     $scope.artImageClick = function(title){

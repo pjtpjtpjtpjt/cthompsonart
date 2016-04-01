@@ -10,10 +10,6 @@ html {
   }
 
 
-.paypal-div{
-    float: right;
-}
-
 .img-responsive {
     box-sizing: border-box;
     box-shadow: 10px 5px 5px black;
@@ -37,6 +33,23 @@ html {
   left: -9999px;
 }
 
+@media (min-width: 264px) {
+    .art-info {
+    padding-right: 50px;
+    position: relative; 
+    bottom: 0;
+/*    float: right;*/
+    color: black;
+    text-align: right;
+    }
+    
+    .paypal-div{
+    position: relative;
+/*    float: right;*/
+    bottom: 0;
+    }
+}
+
 .art-info {
     padding-right: 50px;
     position: relative; 
@@ -46,6 +59,10 @@ html {
     text-align: right;
 }
 
+.paypal-div{
+    float: right;
+}
+     
 .art-larger {
     position: fixed;
     top: 10%;
