@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel='stylesheet' href='/styles/style.css'>
 </head>
+    
+    <div ng-hide='allLoaded' ng-cloak>
+    
 <body ng-app='maelsartapp' ng-controller='gallery-controller'>    
     <h1 class='artist-header'  ng-hide='currentTitle && currentTitle != artdetails.artTitle'>{{artistUser.firstName}} {{artistUser.lastName}} Art </h1>
-    <div class='container-fluid' ng-cloak>
+    <div class='container-fluid'>
         <div ng-repeat='repeatclass in columnClass'>
             <div class={{repeatclass}}>
                 <div ng-repeat='artdetails in smallArtList[$index]'>
@@ -34,4 +37,6 @@
     <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js'></script>
     <script src='/scripts/app.js'></script>
 </body>
+        
+        </div>
 </html>

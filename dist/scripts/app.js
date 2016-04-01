@@ -379,6 +379,8 @@ angular.module('maelsartapp',[])
                     $scope.smallArtListTemp = []
                 };
             };
+        
+            $scope.allLoaded
     })();
     
     $scope.artImageClick = function(title){
