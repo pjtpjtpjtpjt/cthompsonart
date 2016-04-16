@@ -362,7 +362,7 @@ angular.module('maelsartapp',[])
     ];
         
     $scope.artDivide = (function(){
-        $scope.columnClass = {artone:'col-md-3', arttwo:'col-md-3', artthree:'col-md-3', artfour:'col-md-3'}
+        $scope.columnClass = {artone:'col-md-3', arttwo:'col-md-3', artthree:'col-md-3', artfour:'col-md-3'};
         $scope.columnDriver = 4;
 
             $scope.columnMath = Math.ceil($scope.artList.length / $scope.columnDriver)
@@ -376,11 +376,9 @@ angular.module('maelsartapp',[])
                 if(artContainerLimit === $scope.columnMath-1){
                     $scope.smallArtList[smallindex] = $scope.smallArtListTemp;
                     smallindex +=1;
-                    $scope.smallArtListTemp = []
+                    $scope.smallArtListTemp = [];
                 };
             };
-        
-            $scope.allLoaded = 'loaded';
     })();
     
     $scope.artImageClick = function(title){
@@ -394,7 +392,10 @@ angular.module('maelsartapp',[])
             $scope.payPalMerchantID = '';
             $scope.clickedArtTitle = '';
             $scope.clickedArtMedium = '';
-        } else {
+            Object.keys($scope.columnClass).forEach(function(i) {
+                $scope.columnClass[i] = 'col-md-3';
+            });
+        } else {           
             $scope.clickedArtTitle = $scope.smallArtList[this.$parent.$index][this.$index].artTitle;
             $scope.clickedArtMedium = $scope.smallArtList[this.$parent.$index][this.$index].artMedium;
             $scope.clickedArtPurchase = $scope.smallArtList[this.$parent.$index][this.$index].artPurchase;
@@ -403,6 +404,10 @@ angular.module('maelsartapp',[])
             $scope.clickedOriginalSize = $scope.smallArtList[this.$parent.$index][this.$index].originalSize;
             $scope.currentTitle = title;
             $scope.isLarger = 'larger';
+            Object.keys($scope.columnClass).forEach(function(i) {
+                $scope.columnClass[i] = '';
+            });
+            window.scrollTo(0, 100);
         };  
     }
     
@@ -428,14 +433,12 @@ angular.module('maelsartapp',[])
             $scope.revealCost = '$50.00'
             $scope.payPalButton = '/templates/pricePointOne.html'
             $scope.payPalButtonID = '7WE9MTDRNAJ8A'
-        }
-        
+        }  
     };
-   
 });
 
-
-
-
-    
-
+document.body.style.opacity = 0;
+var intervalID = window.setTimeout(delayUntilLoaded, 2000);
+function delayUntilLoaded() {
+  document.body.style.opacity = 1;
+}

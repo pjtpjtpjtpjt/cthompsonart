@@ -9,13 +9,6 @@ html {
   box-sizing: inherit;
   }
 
-
-.img-responsive {
-    box-sizing: border-box;
-    box-shadow: 10px 5px 5px black;
-    margin: 10px;
-}
-
 .artist-header {
     position: relative;
     background-color: black;
@@ -26,55 +19,46 @@ html {
     color: white;
 }
 
-.ng-hide {
-  display: block!important;
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
+.img-responsive {
+    box-shadow: 10px 5px 5px black;
+    margin: 10px;
 }
 
-@media (min-width: 264px) {
-    .art-info {
-    padding-right: 50px;
-    position: relative; 
-    bottom: 0;
-/*    float: right;*/
-    color: black;
-    text-align: right;
-    }
-    
-    .paypal-div{
-    position: relative;
-/*    float: right;*/
-    bottom: 0;
-    }
+.ng-hide {
+    display: block!important;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.art-larger {
+    position: absolute;
+    top: 0; bottom:0; left: 0; right:0;
+    margin: auto;
 }
 
 .art-info {
     padding-right: 50px;
-    position: relative; 
+    position: fixed; 
     right: 0;
     float: right;
     color: black;
     text-align: right;
-}
-
-.paypal-div{
-    float: right;
-}
-     
-.art-larger {
-    position: fixed;
-    top: 10%;
-    left: 28%;
-    margin-top: -70px;
-    margin-left: -100px;
-    max-width: 800px;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white; 
 }
 
 .art-large-text{
-    font-weight: 800;
+    font-weight: bolder;
     padding-bottom: 20px;
+    text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white; 
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
