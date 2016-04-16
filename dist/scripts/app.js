@@ -3,7 +3,8 @@ angular.module('maelsartapp',[])
         
     $scope.artistUser = {
         firstName: 'Chris', 
-        lastName: 'Thompson'
+        lastName: 'Thompson',
+        emailAddress: 'csthompsonart@gmail.com'
         }
     
     $scope.artList = [

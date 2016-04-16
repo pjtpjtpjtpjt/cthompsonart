@@ -9,14 +9,23 @@ html {
   box-sizing: inherit;
   }
 
+.row {
+    background-color: black
+}
+
 .artist-header {
-    position: relative;
-    background-color: black;
-    bottom: 1;
-    left: 0;
-    right: 0;
-    padding: 30px;
     color: white;
+    float: left;
+    padding-left: 60px;
+    padding-bottom: 10px;
+}
+
+.artist-header-two {
+    color: white;
+    float: right;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .img-responsive {
