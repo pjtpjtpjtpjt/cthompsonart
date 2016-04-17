@@ -30,7 +30,7 @@
                 <div ng-model='selectArtType' class='art-specs'>
                     <h3 class='art-large-text'>{{clickedArtTitle}}</h3>
                     <h4>Get art!</h4>
-                    <h4><select class='art-select'>
+                    <h4><select class='form-group art-select'>
                         <option value ng-click='artZero()'>Select a type</option>
                         <option value ng-click='artCost(purchasetype)' ng-repeat='purchasetype in clickedArtPurchase'>{{purchasetype}}</option>
                     </select></h4>
