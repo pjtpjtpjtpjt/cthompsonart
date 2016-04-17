@@ -3,7 +3,7 @@
     <head>
         <meta charset='UTF-8'>
         <title>Chris Thompson - Artist</title>
-<!--        <meta name="viewport" content="width=device-width, initial-scale=1">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel='stylesheet' href='/styles/style.css'>
     </head>
@@ -30,24 +30,13 @@
                 <h3 class='art-large-text'>{{clickedArtTitle}}</h3>
                 <h4 class='art-large-text'>Get art!</h4>
                 <select class='art-select' ng-model='selectArtType' ng-options='x for x in clickedArtPurchase' ng-change='artCost(selectArtType)'>
-                <option value="">Select a type</option>    
+                <option value=''>Select a type</option>
                 </select>
-                    
-                    
-                    
-<!--
-                    <h4><select class='form-group art-select'>
-                        <option value ng-click='artZero()'>Select a type</option>
-                        <option ng-value ng-click='artCost(purchasetype)' ng-repeat='purchasetype in clickedArtPurchase'>{{purchasetype}}</option>
-                    </select></h4>
--->
-                 
                 <h4 class='art-large-text'>{{revealCost}}</h4>
                 <div ng-include src='payPalButton'></div>
-                </div>
             </div>
+        </div>
     
-
         <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js'></script>
         <script src='/scripts/app.js'></script>
     </body>

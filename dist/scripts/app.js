@@ -387,12 +387,12 @@ angular.module('maelsartapp', [])
             title = '';
             $scope.isLarger = '';
             $scope.currentTitle = '';
-            angular.element(document.getElementsByTagName('select')).prop('selectedIndex',0);
             $scope.payPalButton ='';
             $scope.revealCost = '';
             $scope.payPalMerchantID = '';
             $scope.clickedArtTitle = '';
             $scope.clickedArtMedium = '';
+            $scope.clickedArtPurchase = [];
             Object.keys($scope.columnClass).forEach(function(i) {
                 $scope.columnClass[i] = 'col-md-3';
             });
@@ -412,12 +412,7 @@ angular.module('maelsartapp', [])
         };  
     }
     
-    $scope.artZero = function(){
-        $scope.revealCost = '';
-        $scope.payPalButton = '';
-    }
-    
-    $scope.artCost = function(purchasetype){ 
+    $scope.artCost = function(purchasetype){   
         if(purchasetype === 'Original painting'){
             $scope.revealCost = $scope.clickedArtMedium + ' ' + $scope.clickedOriginalSize + ' - ' + $scope.clickedOriginalCost
             $scope.payPalButton = '/templates/pricePointOriginal.html'
@@ -434,7 +429,14 @@ angular.module('maelsartapp', [])
             $scope.revealCost = '$50.00'
             $scope.payPalButton = '/templates/pricePointOne.html'
             $scope.payPalButtonID = '7WE9MTDRNAJ8A'
-        }  
+        }
+        
+        if(purchasetype === null){
+            $scope.revealCost = ''
+            $scope.payPalButton = ''
+            $scope.payPalButtonID = ''
+        } 
+        
     };
 });
 
