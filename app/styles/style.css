@@ -69,16 +69,6 @@ html {
     padding-bottom: 10px;
 }
 
-.art-specs {
-    color: black;
-    padding-bottom: 30px;
-    text-shadow:
-    -1px -1px 0 white,
-    1px -1px 0 white,
-    -1px 1px 0 white,
-    1px 1px 0 white; 
-}
-
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }

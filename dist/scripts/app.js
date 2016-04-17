@@ -439,7 +439,7 @@ angular.module('maelsartapp',[])
 });
 
 document.body.style.opacity = 0;
-var intervalID = window.setTimeout(delayUntilLoaded, 2000);
+var intervalID = window.setTimeout(delayUntilLoaded, 2500);
 function delayUntilLoaded() {
   document.body.style.opacity = 1;
 }
