@@ -2,6 +2,9 @@
   "name": "maelsart",
   "version": "0.0.0",
   "description": "Art gallery",
+  "engine": {
+    "node": "v5.10.1"  
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/bloc/maelsart"
