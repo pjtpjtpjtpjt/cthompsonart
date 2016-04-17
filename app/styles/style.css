@@ -41,15 +41,17 @@ html {
 }
 
 .art-larger {
-    position: absolute;
     top: 0; bottom:0; left: 0; right:0;
     margin: auto;
 }
 
 .all-info {
-    position: fixed;
+    position: absolute;
     padding-right: 50px;
+    margin-top: 100px;
+    text-align: right;
     right: 0;
+    top: 0;
     float: right;
 }
 
@@ -67,10 +69,9 @@ html {
     padding-bottom: 10px;
 }
 
-.art-info {
+.art-specs {
     color: black;
     padding-bottom: 30px;
-    text-align: right;
     text-shadow:
     -1px -1px 0 white,
     1px -1px 0 white,
