@@ -29,16 +29,24 @@
             <div class='all-info'>
                 <h3 class='art-large-text'>{{clickedArtTitle}}</h3>
                 <h4 class='art-large-text'>Get art!</h4>
-                <div ng-model='selectArtType'>
+                <select class='art-select' ng-model='selectArtType' ng-options='x for x in clickedArtPurchase' ng-change='artCost(selectArtType)'>
+                <option value="">Select a type</option>    
+                </select>
+                    
+                    
+                    
+<!--
                     <h4><select class='form-group art-select'>
                         <option value ng-click='artZero()'>Select a type</option>
                         <option ng-value ng-click='artCost(purchasetype)' ng-repeat='purchasetype in clickedArtPurchase'>{{purchasetype}}</option>
                     </select></h4>
-                 </div>
+-->
+                 
                 <h4 class='art-large-text'>{{revealCost}}</h4>
-                <div ng-include src='payPalButton'></div>        
+                <div ng-include src='payPalButton'></div>
+                </div>
             </div>
-        </div>
+    
 
         <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js'></script>
         <script src='/scripts/app.js'></script>
