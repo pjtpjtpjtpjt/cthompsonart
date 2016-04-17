@@ -50,12 +50,12 @@ html {
     position: fixed;
     padding-right: 50px;
     right: 0;
-    float: right; 
+    float: right;
 }
 
 .art-large-text{
     font-weight: bolder;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     text-shadow:
     -1px -1px 0 white,
     1px -1px 0 white,
@@ -63,8 +63,13 @@ html {
     1px 1px 0 white; 
 }
 
+.art-select {
+    padding-bottom: 10px;
+}
+
 .art-info {
     color: black;
+    padding-bottom: 30px;
     text-align: right;
     text-shadow:
     -1px -1px 0 white,
