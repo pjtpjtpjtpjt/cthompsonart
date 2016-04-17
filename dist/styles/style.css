@@ -46,13 +46,16 @@ html {
     margin: auto;
 }
 
-.art-info {
+.all-info {
+    position: fixed;
     padding-right: 50px;
-    position: fixed; 
     right: 0;
-    float: right;
-    color: black;
-    text-align: right;
+    float: right; 
+}
+
+.art-large-text{
+    font-weight: bolder;
+    padding-bottom: 20px;
     text-shadow:
     -1px -1px 0 white,
     1px -1px 0 white,
@@ -60,9 +63,9 @@ html {
     1px 1px 0 white; 
 }
 
-.art-large-text{
-    font-weight: bolder;
-    padding-bottom: 20px;
+.art-info {
+    color: black;
+    text-align: right;
     text-shadow:
     -1px -1px 0 white,
     1px -1px 0 white,
