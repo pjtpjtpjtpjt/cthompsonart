@@ -19,7 +19,7 @@
                 <div class={{repeatclass}}>
                     <div ng-repeat='artdetails in smallArtList[$index]'>
                         <img class='img-responsive' ng-src='{{artdetails.artImageUrl}}' ng-click='artImageClick(artdetails.artTitle)'
-                         ng-hide='currentTitle && currentTitle != artdetails.artTitle' ng-class='{"art-larger": isLarger === "larger"}'>
+                         ng-hide='currentTitle && currentTitle != artdetails.artTitle' ng-class='{"art-larger": isLarger === "larger"}' title='{{artdetails.artTitle}}'>
                     </div>
                 </div>
             </div>
@@ -27,19 +27,16 @@
 
         <div ng-show='currentTitle && currentTitle != artdetails.artTitle'>
             <div class='all-info'>
-                <div ng-model='selectArtType' class='art-specs'>
-                    <h3 class='art-large-text'>{{clickedArtTitle}}</h3>
-                    <h4>Get art!</h4>
-                    <h4><select class='form-group art-select'>
-                        <option value ng-click='artZero()'>Select a type</option>
-                        <option value ng-click='artCost(purchasetype)' ng-repeat='purchasetype in clickedArtPurchase'>{{purchasetype}}</option>
-                    </select></h4>
-                    <h4 class='art-large-text'>{{revealCost}}</h4>
-                    <div ng-include src='payPalButton'></div>
-                </div>             
+                <h3 class='art-large-text'>{{clickedArtTitle}}</h3>
+                <h4 class='art-large-text'>Get art!</h4>
+                <select class='art-select' ng-model='selectArtType' ng-options='x for x in clickedArtPurchase' ng-change='artCost(selectArtType)'>
+                <option value=''>Select a type</option>
+                </select>
+                <h4 class='art-large-text'>{{revealCost}}</h4>
+                <div ng-include src='payPalButton'></div>
             </div>
         </div>
-
+    
         <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js'></script>
         <script src='/scripts/app.js'></script>
     </body>
