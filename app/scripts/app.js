@@ -408,7 +408,7 @@ angular.module('maelsartapp', [])
             Object.keys($scope.columnClass).forEach(function(i) {
                 $scope.columnClass[i] = '';
             });
-            window.scrollTo(0, 100);
+            window.scrollTo(0, 90);
         };  
     }
     
