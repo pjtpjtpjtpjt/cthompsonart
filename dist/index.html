@@ -3,7 +3,7 @@
     <head>
         <meta charset='UTF-8'>
         <title>Chris Thompson - Artist</title>
-<!--        <meta name="viewport" content="width=device-width, initial-scale=1">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel='stylesheet' href='/styles/style.css'>
     </head>
@@ -19,7 +19,7 @@
                 <div class={{repeatclass}}>
                     <div ng-repeat='artdetails in smallArtList[$index]'>
                         <img class='img-responsive' ng-src='{{artdetails.artImageUrl}}' ng-click='artImageClick(artdetails.artTitle)'
-                         ng-hide='currentTitle && currentTitle != artdetails.artTitle' ng-class='{"art-larger": isLarger === "larger"}'>
+                         ng-hide='currentTitle && currentTitle != artdetails.artTitle' ng-class='{"art-larger": isLarger === "larger"}' title='{{artdetails.artTitle}}'>
                     </div>
                 </div>
             </div>
