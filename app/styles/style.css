@@ -57,13 +57,21 @@ html {
 
 .art-large-text{
     font-weight: bolder;
-    padding-bottom: 30px;
     text-shadow:
     -1px -1px 0 white,
     1px -1px 0 white,
     -1px 1px 0 white,
     1px 1px 0 white; 
 }
+
+ @media (min-width: 320px) {
+     .art-larger, .all-info {
+     position: static;
+     float: right;
+     margin-top: 0;
+     margin-bottom: 0;
+     }
+ }
 
 .art-select {
     padding-bottom: 10px;
