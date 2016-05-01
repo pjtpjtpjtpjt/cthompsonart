@@ -1,6 +1,8 @@
 # cthompsonart
 An website for an artist to display and sell his art.
 
+![alt text](https://github.com/pjtpjtpjtpjt/cthompsonart/blob/master/app/assets/images/cthompsonart-thumb.jpg "cthompsonart main view")
+
 ## Method behind the madness
 This website was first and foremost designed to showcase the artist's work. Hence the home page that shows, immediately, all the art he has available to display. 
 
