@@ -1,5 +1,5 @@
 # cthompsonart
-An website for an artist to display and sell his art.
+A website for an artist to display and sell his art.
 
 ![alt text](https://github.com/pjtpjtpjtpjt/cthompsonart/blob/master/app/assets/images/cthompsonart-thumb.jpg "cthompsonart main view")
 
