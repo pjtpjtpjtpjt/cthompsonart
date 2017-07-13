@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Art gallery",
   "engine": {
-    "node": "v5.10.1"  
+    "node": "v6.11.0"  
   },
   "repository": {
     "type": "git",
