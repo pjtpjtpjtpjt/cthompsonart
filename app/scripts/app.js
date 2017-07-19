@@ -1,14 +1,14 @@
 angular.module('maelsartapp', [])
     .controller('gallery-controller', function($scope) {
-        
+
     $scope.artistUser = {
-        firstName: 'Chris', 
+        firstName: 'Chris',
         lastName: 'Thompson',
         emailAddress: 'csthompsonart@gmail.com'
         }
-    
+
     $scope.artList = [
-        {   
+        {
         artTitle: 'Battleship',
         artYear:'2011',
         artTopic: 'military',
@@ -30,7 +30,7 @@ angular.module('maelsartapp', [])
         originalSize: '16" x 20"',
         artOriginalCost: '$650.00'
         },
-        { 
+        {
         artTitle: 'Angry Chihuahua',
         artYear:'2011',
         artTopic: 'animal',
@@ -41,7 +41,7 @@ angular.module('maelsartapp', [])
         originalSize: 'x',
         artOriginalCost: 'x'
         },
-        { 
+        {
         artTitle: 'Humpty',
         artYear:'2011',
         artTopic: 'animal',
@@ -63,7 +63,7 @@ angular.module('maelsartapp', [])
         originalSize: 'x',
         artOriginalCost: 'x'
         },
-        { 
+        {
         artTitle: 'Metal Moths',
         artYear:'2011',
         artTopic: 'animal',
@@ -361,7 +361,7 @@ angular.module('maelsartapp', [])
         artOriginalCost: 'x'
         },
     ];
-        
+
     $scope.artDivide = (function(){
         $scope.columnClass = {artone:'col-md-3', arttwo:'col-md-3', artthree:'col-md-3', artfour:'col-md-3'};
         $scope.columnDriver = 4;
@@ -371,7 +371,7 @@ angular.module('maelsartapp', [])
             $scope.smallArtList = Array($scope.columnDriver);
             $scope.smallArtListTemp = [];
 
-            for(i=0;i < $scope.artList.length; i++){      
+            for(i=0;i < $scope.artList.length; i++){
                 $scope.smallArtListTemp.push($scope.artList[i]);
                 var artContainerLimit = i % $scope.columnMath
                 if(artContainerLimit === $scope.columnMath-1){
@@ -381,7 +381,22 @@ angular.module('maelsartapp', [])
                 };
             };
     })();
-    
+
+    $scope.returnToMain = function() {
+      title = '';
+      $scope.isLarger = '';
+      $scope.currentTitle = '';
+      $scope.payPalButton ='';
+      $scope.revealCost = '';
+      $scope.payPalMerchantID = '';
+      $scope.clickedArtTitle = '';
+      $scope.clickedArtMedium = '';
+      $scope.clickedArtPurchase = [];
+      Object.keys($scope.columnClass).forEach(function(i) {
+          $scope.columnClass[i] = 'col-md-3';
+      });
+  };
+
     $scope.artImageClick = function(title){
         if(title === $scope.currentTitle){
             title = '';
@@ -396,7 +411,7 @@ angular.module('maelsartapp', [])
             Object.keys($scope.columnClass).forEach(function(i) {
                 $scope.columnClass[i] = 'col-md-3';
             });
-        } else {           
+        } else {
             $scope.clickedArtTitle = $scope.smallArtList[this.$parent.$index][this.$index].artTitle;
             $scope.clickedArtMedium = $scope.smallArtList[this.$parent.$index][this.$index].artMedium;
             $scope.clickedArtPurchase = $scope.smallArtList[this.$parent.$index][this.$index].artPurchase;
@@ -409,34 +424,34 @@ angular.module('maelsartapp', [])
                 $scope.columnClass[i] = '';
             });
             window.scrollTo(0, 90);
-        };  
+        };
     }
-    
-    $scope.artCost = function(purchasetype){   
+
+    $scope.artCost = function(purchasetype){
         if(purchasetype === 'Original painting'){
             $scope.revealCost = $scope.clickedArtMedium + ' ' + $scope.clickedOriginalSize + ' - ' + $scope.clickedOriginalCost
             $scope.payPalButton = '/templates/pricePointOriginal.html'
             $scope.payPalMerchantID = "V49LQU5XHP2NU"
         };
-        
+
         if(purchasetype === 'Print'){
             $scope.revealCost = $scope.clickedPrintSize + ' - $25.00'
             $scope.payPalButton = '/templates/pricePointOne.html'
             $scope.payPalButtonID = 'AEATZEN7TS7L6'
         };
-        
+
         if(purchasetype === 'T-Shirt'){
             $scope.revealCost = '$50.00'
             $scope.payPalButton = '/templates/pricePointOne.html'
             $scope.payPalButtonID = '7WE9MTDRNAJ8A'
         }
-        
+
         if(purchasetype === null){
             $scope.revealCost = ''
             $scope.payPalButton = ''
             $scope.payPalButtonID = ''
-        } 
-        
+        }
+
     };
 });
 
