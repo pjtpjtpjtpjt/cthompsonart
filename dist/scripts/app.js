@@ -383,6 +383,7 @@ angular.module('maelsartapp', ['ngTouch'])
     })();
 
     $scope.returnToMain = function() {
+      $scope.direction = 'left';
       title = '';
       $scope.isLarger = '';
       $scope.currentTitle = '';
