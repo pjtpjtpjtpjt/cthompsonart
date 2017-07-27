@@ -1,4 +1,4 @@
-angular.module('maelsartapp', [])
+angular.module('maelsartapp', ['ngTouch'])
     .controller('gallery-controller', function($scope) {
 
     $scope.artistUser = {

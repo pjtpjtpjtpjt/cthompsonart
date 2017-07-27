@@ -30,7 +30,7 @@ html {
 
 #gallery-button {
   position: absolute;
-  margin-top: 800px;
+  margin-top: 600px;
   text-align: right;
   right: 50px;
   top: 0;
@@ -54,6 +54,7 @@ html {
     position: relative;
     top: 0; bottom:0; left: 0; right:0;
     margin: auto;
+    cursor: URL(http://s3.amazonaws.com/christhompsonproductions/battleship1.jpg),auto;
 }
 
 .all-info {

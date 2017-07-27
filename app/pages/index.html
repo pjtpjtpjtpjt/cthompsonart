@@ -35,10 +35,11 @@
                 <h4 class='art-large-text'>{{revealCost}}</h4>
                 <div ng-include src='payPalButton'></div>
             </div>
-            <button type="button" class="btn btn-primary btn-xs" id="gallery-button" ng-click=returnToMain()>Return to Gallery</button>
+            <button type="button" class="btn btn-primary" id="gallery-button" ng-swipe-left=returnToMain() ng-click=returnToMain()>Back to Gallery</button>
         </div>
 
         <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js'></script>
+        <script src='https:////ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-touch.js'></script>
         <script src='/scripts/app.js'></script>
     </body>
 </html>
