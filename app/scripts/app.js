@@ -360,6 +360,150 @@ angular.module('maelsartapp', ['ngTouch'])
         originalSize: 'x',
         artOriginalCost: 'x'
         },
+        {
+        artTitle: 'Albino Penguin',
+        artYear:'2019',
+        artTopic: 'animal',
+        artImageUrl: 'http://s3.amazonaws.com/christhompsonproductions/albinopenguin.jpg',
+        artMedium: 'x',
+        artPurchase: ['Print'],
+        printSize: 'x',
+        originalSize: 'x',
+        artOriginalCost: 'x'
+        },
+        {
+        artTitle: 'Byakhee',
+        artYear:'2019',
+        artTopic: 'animal',
+        artImageUrl: 'http://s3.amazonaws.com/christhompsonproductions/byakhee.jpg',
+        artMedium: 'x',
+        artPurchase: ['Print'],
+        printSize: 'x',
+        originalSize: 'x',
+        artOriginalCost: 'x'
+        },
+        {
+        artTitle: 'Fungus Vampire',
+        artYear:'2019',
+        artTopic: 'animal',
+        artImageUrl: 'http://s3.amazonaws.com/christhompsonproductions/fungusvampire.jpg',
+        artMedium: 'x',
+        artPurchase: ['Print'],
+        printSize: 'x',
+        originalSize: 'x',
+        artOriginalCost: 'x'
+        },
+        {
+        artTitle: 'Night Guant',
+        artYear:'2019',
+        artTopic: 'animal',
+        artImageUrl: 'http://s3.amazonaws.com/christhompsonproductions/nightguant.jpg',
+        artMedium: 'x',
+        artPurchase: ['Print'],
+        printSize: 'x',
+        originalSize: 'x',
+        artOriginalCost: 'x'
+        },
+        {
+        artTitle: 'Raptor',
+        artYear:'2019',
+        artTopic: 'animal',
+        artImageUrl: 'http://s3.amazonaws.com/christhompsonproductions/raptor.jpg',
+        artMedium: 'x',
+        artPurchase: ['Print'],
+        printSize: 'x',
+        originalSize: 'x',
+        artOriginalCost: 'x'
+        },
+        {
+        artTitle: 'Black Lagoon',
+        artYear:'2019',
+        artTopic: 'animal',
+        artImageUrl: 'http://s3.amazonaws.com/christhompsonproductions/blacklagoon.jpeg',
+        artMedium: 'x',
+        artPurchase: ['Print'],
+        printSize: 'x',
+        originalSize: 'x',
+        artOriginalCost: 'x'
+        },
+        {
+        artTitle: 'Captain',
+        artYear:'2019',
+        artTopic: 'animal',
+        artImageUrl: 'http://s3.amazonaws.com/christhompsonproductions/captain.jpeg',
+        artMedium: 'x',
+        artPurchase: ['Print'],
+        printSize: 'x',
+        originalSize: 'x',
+        artOriginalCost: 'x'
+        },
+        {
+        artTitle: 'Cthulu',
+        artYear:'2019',
+        artTopic: 'animal',
+        artImageUrl: 'http://s3.amazonaws.com/christhompsonproductions/cthulu1.jpeg',
+        artMedium: 'x',
+        artPurchase: ['Print'],
+        printSize: 'x',
+        originalSize: 'x',
+        artOriginalCost: 'x'
+        },
+        {
+        artTitle: 'Musictopus',
+        artYear:'2019',
+        artTopic: 'animal',
+        artImageUrl: 'http://s3.amazonaws.com/christhompsonproductions/musictopus.jpg',
+        artMedium: 'x',
+        artPurchase: ['Print'],
+        printSize: 'x',
+        originalSize: 'x',
+        artOriginalCost: 'x'
+        },
+        {
+        artTitle: 'Doggies',
+        artYear:'2019',
+        artTopic: 'animal',
+        artImageUrl: 'http://s3.amazonaws.com/christhompsonproductions/doggies.jpeg',
+        artMedium: 'x',
+        artPurchase: ['Print'],
+        printSize: 'x',
+        originalSize: 'x',
+        artOriginalCost: 'x'
+        },
+        {
+        artTitle: 'Dog In Space',
+        artYear:'2019',
+        artTopic: 'animal',
+        artImageUrl: 'http://s3.amazonaws.com/christhompsonproductions/doginspace.jpeg',
+        artMedium: 'x',
+        artPurchase: ['Print'],
+        printSize: 'x',
+        originalSize: 'x',
+        artOriginalCost: 'x'
+        },
+        {
+        artTitle: 'Sharky',
+        artYear:'2019',
+        artTopic: 'animal',
+        artImageUrl: 'http://s3.amazonaws.com/christhompsonproductions/sharky.jpeg',
+        artMedium: 'x',
+        artPurchase: ['Print'],
+        printSize: 'x',
+        originalSize: 'x',
+        artOriginalCost: 'x'
+        },
+        {
+        artTitle: 'Snow',
+        artYear:'2019',
+        artTopic: 'animal',
+        artImageUrl: 'http://s3.amazonaws.com/christhompsonproductions/untitled.jpeg',
+        artMedium: 'x',
+        artPurchase: ['Print'],
+        printSize: 'x',
+        originalSize: 'x',
+        artOriginalCost: 'x'
+        },
+
     ];
 
     $scope.artDivide = (function(){
