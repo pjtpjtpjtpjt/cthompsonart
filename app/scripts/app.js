@@ -503,6 +503,17 @@ angular.module('maelsartapp', ['ngTouch'])
         originalSize: 'x',
         artOriginalCost: 'x'
         },
+        {
+        artTitle: 'Albino Penguin',
+        artYear:'2019',
+        artTopic: 'animal',
+        artImageUrl: 'http://s3.amazonaws.com/christhompsonproductions/albinopenguin.jpg',
+        artMedium: 'x',
+        artPurchase: ['Print'],
+        printSize: 'x',
+        originalSize: 'x',
+        artOriginalCost: 'x'
+        },
 
     ];
 
