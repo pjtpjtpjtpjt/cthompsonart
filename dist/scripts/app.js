@@ -496,7 +496,7 @@ angular.module('maelsartapp', ['ngTouch'])
         artTitle: 'Snow',
         artYear:'2019',
         artTopic: 'animal',
-        artImageUrl: 'http://s3.amazonaws.com/christhompsonproductions/untitled.jpeg',
+        artImageUrl: 'http://s3.amazonaws.com/christhompsonproductions/Untitled.jpeg',
         artMedium: 'x',
         artPurchase: ['Print'],
         printSize: 'x',
