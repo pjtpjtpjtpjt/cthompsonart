@@ -503,22 +503,11 @@ angular.module('maelsartapp', ['ngTouch'])
         originalSize: 'x',
         artOriginalCost: 'x'
         },
-        {
-        artTitle: 'Albino Penguin',
-        artYear:'2019',
-        artTopic: 'animal',
-        artImageUrl: 'http://s3.amazonaws.com/christhompsonproductions/albinopenguin.jpg',
-        artMedium: 'x',
-        artPurchase: ['Print'],
-        printSize: 'x',
-        originalSize: 'x',
-        artOriginalCost: 'x'
-        },
     ];
 
     $scope.artDivide = (function(){
         $scope.columnClass = {artone:'col-md-3', arttwo:'col-md-3', artthree:'col-md-3', artfour:'col-md-3'};
-        $scope.columnDriver = 5;
+        $scope.columnDriver = 6;
 
             $scope.columnMath = Math.ceil($scope.artList.length / $scope.columnDriver)
             var smallindex = 0
