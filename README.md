@@ -1,5 +1,5 @@
 # cthompsonart
-A website for an artist to display and sell his art. Established 2016!
+A website for an artist to display and sell his art. Established 2016! And still going
 
 ![alt text](https://github.com/pjtpjtpjtpjt/cthompsonart/blob/master/app/assets/images/cthompsonart-thumb.jpg "cthompsonart main view")
 
