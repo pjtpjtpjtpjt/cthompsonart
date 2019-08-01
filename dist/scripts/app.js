@@ -509,7 +509,7 @@ angular.module('maelsartapp', ['ngTouch'])
         $scope.columnClass = {artone:'col-md-3', arttwo:'col-md-3', artthree:'col-md-3', artfour:'col-md-3', artfive:'col-md-3'};
         $scope.columnDriver = 5;
 
-            $scope.columnMath = 12
+            $scope.columnMath = Math.ceil($scope.artList.length / $scope.columnDriver)
             var smallindex = 0
             $scope.smallArtList = Array($scope.columnDriver);
             $scope.smallArtListTemp = [];
