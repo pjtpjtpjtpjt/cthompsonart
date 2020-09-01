@@ -17,7 +17,7 @@
   "author": "Paul Thompson",
   "license": "ISC",
   "dependencies": {
-    "hapi": "^7.5.3",
+    "hapi": "^18.1.0",
     "path": "^0.4.9"
   },
   "devDependencies": {
